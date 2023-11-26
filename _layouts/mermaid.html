@@ -1,0 +1,41 @@
+---
+layout: post
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    
+    <!-- mermaid 문법 적용하기 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <!-- mermaid 가운데 정렬하기 -->
+    <style>
+    .language-mermaid > svg {
+        display: block; margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <section class="content">
+        {{ content }}
+    </section>
+    <footer>
+        <p>Custom Footer</p>
+    </footer>
+</body>
+
+<script>
+    var config = {
+        startOnLoad:true,
+        theme: 'forest',
+        flowchart:{
+                useMaxWidth:false,
+                htmlLabels:true
+            }
+    };
+    mermaid.initialize(config);
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
+    
+</html>

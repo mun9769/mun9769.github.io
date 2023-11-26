@@ -22,6 +22,7 @@ categories: jekyll update
 graph TB
 a[MainView] --> b[HomeView]
 a --> TabBarView
+k --> q
 ~~~
 
 SwiftUI는 부모뷰가 가진 상태값을 자식뷰에게 전달하는 단방향 데이터 흐름 방식을 채택합니다.

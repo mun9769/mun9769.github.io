@@ -18,11 +18,12 @@ categories: jekyll update
 ## 왜 이런일이 발생했나요?
 
 우리 앱의 **뷰 계층**은 다음과 같습니다.
-```mermaid
+~~~mermaid
 graph TB
 a[MainView] --> b[HomeView]
 a --> TabBarView
-```
+k --> q
+~~~
 
 SwiftUI는 부모뷰가 가진 상태값을 자식뷰에게 전달하는 단방향 데이터 흐름 방식을 채택합니다.
 자식뷰은 부모뷰의 상태를 공유받고 부모뷰의 상태 변경될 때마다 업데이트를 받을 수 있습니다.
